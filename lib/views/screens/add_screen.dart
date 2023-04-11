@@ -25,6 +25,7 @@ class AddScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
             child: InkWell(
+              onTap: ()=>Get.back(),
               child: Icon(
                 CupertinoIcons.arrow_uturn_left,
                 color: AppColors.textColor,
@@ -371,7 +372,8 @@ class AddScreen extends StatelessWidget {
                                     fontWeight: FontWeight.w600),
                               )
                             ]),
-                      )
+                      ),
+                      13.verticalSpace
                     ],
                   );
                 }),
