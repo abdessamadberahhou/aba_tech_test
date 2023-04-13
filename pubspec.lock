@@ -105,22 +105,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.2"
-  easy_splash_screen:
-    dependency: "direct main"
-    description:
-      name: easy_splash_screen
-      sha256: "69130aebd9da3619c41b7d80a4905064bfe88a3df8a1d1eae2bcb4efd063a6fc"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.4"
-  equatable:
-    dependency: transitive
-    description:
-      name: equatable
-      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -145,14 +129,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.4"
-  fl_chart:
-    dependency: "direct main"
-    description:
-      name: fl_chart
-      sha256: e97c5b850ad056e9b3a85d3afeb44c239a83aa994a90723940dac82234f2efaf
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.61.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -387,14 +363,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
-  scrollable_positioned_list:
-    dependency: "direct main"
-    description:
-      name: scrollable_positioned_list
-      sha256: ca7fcaa743db712d4f7b1580526f494d0093c77a721a65705ee51fbeac7a2bd3
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.3.5"
   sky_engine:
     dependency: transitive
     description: flutter
