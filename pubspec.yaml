@@ -28,8 +28,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cached_network_image: ^3.2.3
   cupertino_icons: ^1.0.2
   curved_nav_bar: ^0.0.2
+  dio: ^5.1.1
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.13.0
@@ -37,7 +39,9 @@ dependencies:
   get: ^4.6.5
   get_storage: ^2.1.1
   google_fonts: ^4.0.3
+  intl: ^0.18.0
   modal_bottom_sheet: ^2.1.2
+  webview_flutter: ^4.0.7
 
 dev_dependencies:
   flutter_lints: ^2.0.0
