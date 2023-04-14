@@ -1,13 +1,10 @@
 import 'package:assign_project/controllers/home_controller.dart';
-import 'package:assign_project/utils/palette.dart';
 import 'package:assign_project/utils/utils.dart';
 import 'package:assign_project/views/widgets/widgets.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,11 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('News App'),
-        toolbarHeight: 60.h,
-        elevation: 0,
-      ),
+      appBar: CustomAppbar(),
       body: Container(
         width: 375.w,
         child: ScrollConfiguration(
@@ -46,12 +39,13 @@ class HomeScreen extends StatelessWidget {
                         crossAxisAlignment: controller.loading.value
                             ? CrossAxisAlignment.center
                             : CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           controller.loading.value
                               ? Center(
                                   child: Container(
-                                    margin: EdgeInsets.symmetric(vertical: 150.h),
+                                    margin:
+                                        EdgeInsets.symmetric(vertical: 150.h),
                                     decoration: BoxDecoration(
                                         color: Colors.blue[200],
                                         borderRadius:
@@ -113,6 +107,7 @@ class HomeScreen extends StatelessWidget {
                                               blurRadius: 5)
                                         ]),
                                     child: NewsWidget(
+                                      news: controller.news[index],
                                         title: controller.news[index].title,
                                         imagePath:
                                             controller.news[index].urlToImage ??
@@ -126,6 +121,11 @@ class HomeScreen extends StatelessWidget {
                                 ),
                         ],
                       ),
+                      controller.loadingMore.value
+                          ? Center(
+                              child: CircularProgressIndicator(),
+                            )
+                          : SizedBox()
                     ],
                   ),
                 );
