@@ -1,3 +1,4 @@
+import 'package:assign_project/views/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +21,7 @@ void main() {
         theme: ThemeData(
           textTheme: GoogleFonts.nunitoTextTheme(),
         ),
-        // home: HomeScreen(),
+        home: HomeScreen(),
       );
     },
   ));
