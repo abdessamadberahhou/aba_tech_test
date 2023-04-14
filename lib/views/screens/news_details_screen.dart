@@ -31,7 +31,7 @@ class NewsDetailsScreen extends StatelessWidget {
                         child: CachedNetworkImage(
                           errorWidget: (context, url, error) =>
                               Image.asset('assets/images/noimage.png'),
-                          imageUrl: controller.news.urlToImage!,
+                          imageUrl: controller.news.urlToImage?? "",
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -71,7 +71,7 @@ class NewsDetailsScreen extends StatelessWidget {
                             ),
                             10.verticalSpace,
                             Text(
-                              controller.news.description!,
+                              controller.news.description ?? "",
                               style: TextStyle(
                                 fontSize: 16.sp,
                               ),
@@ -89,7 +89,7 @@ class NewsDetailsScreen extends StatelessWidget {
                             ),
                             10.verticalSpace,
                             Text(
-                              controller.news.content!,
+                              controller.news.content  ?? "",
                               style: TextStyle(
                                 fontSize: 16.sp,
                               ),
@@ -104,7 +104,7 @@ class NewsDetailsScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  controller.news.source!.name!,
+                                  controller.news.source != null ? controller.news.source!.name ?? "unkown" : "unkown",
                                   style: TextStyle(
                                       fontSize: 16.sp,
                                       fontWeight: FontWeight.w600),
