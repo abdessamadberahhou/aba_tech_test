@@ -25,13 +25,16 @@ class NewsDetailsScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                          height: 230.h,
-                          width: 375.w,
-                          constraints: BoxConstraints(minHeight: 180),
-                          child: CachedNetworkImage(
-                            fit: BoxFit.cover,
-                            imageUrl: controller.news.urlToImage!,
-                          )),
+                        height: 230.h,
+                        width: 375.w,
+                        constraints: BoxConstraints(minHeight: 180),
+                        child: CachedNetworkImage(
+                          errorWidget: (context, url, error) =>
+                              Image.asset('assets/images/noimage.png'),
+                          imageUrl: controller.news.urlToImage!,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                       Container(
                         padding: EdgeInsets.symmetric(
                             horizontal: 20.w, vertical: 10.h),
